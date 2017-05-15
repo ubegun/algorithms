@@ -1,0 +1,40 @@
+group = 'com.up'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'idea'
+apply plugin: 'java'
+
+apply plugin: 'application'
+apply plugin: 'distribution'
+
+archivesBaseName = 'up-interview'
+
+mainClassName = 'com.up.interview.Network'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        // https://plugins.gradle.org/plugin/com.github.kt3k.coveralls
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3"
+        // https://github.com/aaschmid/gradle-cpd-plugin
+        classpath 'de.aaschmid.gradle.plugins:gradle-cpd-plugin:0.5'
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.5.2'
+}
