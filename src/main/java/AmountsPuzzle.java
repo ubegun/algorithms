@@ -38,6 +38,8 @@ import java.util.*;
  */
 public class AmountsPuzzle {
 
+  private HashMap<Integer, List<Integer>> amountSets;
+
   public AmountsPuzzle() {
   }
 

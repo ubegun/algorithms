@@ -42,7 +42,6 @@ public class Key extends BruteForce {
 
 
     public Key() {
-        longString.equals()
         super();
     }
 
