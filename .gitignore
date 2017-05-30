@@ -33,3 +33,4 @@ tmp
 atlassian-ide-plugin.xml
 
 **/.clover
+**/gradlew.bat
