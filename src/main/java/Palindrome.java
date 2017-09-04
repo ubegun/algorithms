@@ -27,7 +27,7 @@ public final class Palindrome {
   }
 
   /**
-   * From evaluation of time: T(n) = O(n/2)
+   * From evaluation of time: T(n) = O(n)
    * From evaluation of space: S(n) = O(n)
    *
    * @param value is input char array
